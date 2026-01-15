@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimoni Pelanggan - Ehanz Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #0ea5e9;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --light-gray: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .header h1 {
+      color: var(--primary);
+      font-size: 1.9rem;
+      margin-bottom: 20px;
+    }
+
+    .header a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .testimoni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 18px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+    }
+
+    .testimoni-item {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .testimoni-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .testimoni-item img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding: 20px 0;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin: 8px 0 0;
+    }
+
+    @media (max-width: 600px) {
+      .testimoni-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .header h1 { font-size: 1.6rem; }
+    }
+
+    @media (min-width: 768px) {
+      .testimoni-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .testimoni-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1><i class="fas fa-comments"></i> Testimoni Pelanggan</h1>
+    <a href="EHANZZ.html">← Kembali ke Beranda</a>
+  </div>
+
+  <div class="testimoni-grid">
+    <!-- Ganti placeholder dengan URL gambar asli kamu -->
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+1" alt="Testimoni 1"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+2" alt="Testimoni 2"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+3" alt="Testimoni 3"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+4" alt="Testimoni 4"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+5" alt="Testimoni 5"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+6" alt="Testimoni 6"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+7" alt="Testimoni 7"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+8" alt="Testimoni 8"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+9" alt="Testimoni 9"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+10" alt="Testimoni 10"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+11" alt="Testimoni 11"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+12" alt="Testimoni 12"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+13" alt="Testimoni 13"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+14" alt="Testimoni 14"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+15" alt="Testimoni 15"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+16" alt="Testimoni 16"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+17" alt="Testimoni 17"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+18" alt="Testimoni 18"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+19" alt="Testimoni 19"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+20" alt="Testimoni 20"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+21" alt="Testimoni 21"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+22" alt="Testimoni 22"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+23" alt="Testimoni 23"></div>
+    <div class="testimoni-item"><img src="https://placehold.co/200x200/f1f5f9/64748b?text=Testi+24" alt="Testimoni 24"></div>
+  </div>
+
+  <footer>
+    <p>Hak Cipta &copy; 2025 | Ehanz Store</p>
+  </footer>
+
+</body>
+</html>
+

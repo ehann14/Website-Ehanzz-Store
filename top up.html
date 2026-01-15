@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Up - Ehanz Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #0ea5e9;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --light-gray: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2 {
+      color: var(--primary);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 24px;
+      color: var(--secondary);
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 0 auto 32px;
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .game-boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .game-boxes {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .game-boxes button {
+      background: #f1f5f9;
+      border: 2px solid var(--light-gray);
+      border-radius: 12px;
+      padding: 14px 8px;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .game-boxes button:hover {
+      border-color: var(--secondary);
+    }
+
+    .game-boxes button.active {
+      background: var(--secondary);
+      color: white;
+      border-color: var(--secondary);
+    }
+
+    .topup-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .topup-options {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .topup-options button {
+      background: #f8fafc;
+      border: 1px solid var(--light-gray);
+      border-radius: 10px;
+      padding: 12px;
+      color: var(--dark);
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .topup-options button:hover {
+      border-color: var(--accent);
+    }
+
+    .topup-options button.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    #price-display {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin: 16px 0;
+    }
+
+    .payment-methods {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .payment-methods label {
+      background: #f8fafc;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid var(--light-gray);
+      text-align: center;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .payment-methods input[type="radio"] {
+      display: none;
+    }
+
+    .payment-methods input[type="radio"]:checked + span {
+      background: var(--secondary);
+      color: white;
+      border-color: var(--secondary);
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background: var(--secondary);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding: 20px 0;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <h1><i class="fas fa-bolt"></i> Ehanz Store</h1>
+  <h2>Top Up Center</h2>
+
+  <div class="container">
+    <input type="text" placeholder="Masukkan ID Pengguna" id="user-id">
+
+    <label style="display:block;margin-bottom:10px;font-weight:600;color:var(--primary);">Pilih Game</label>
+    <div class="game-boxes" id="game-list">
+      <button data-game="ml">Mobile Legends</button>
+      <button data-game="ff">Free Fire</button>
+      <button data-game="pubg">PUBG Mobile</button>
+      <button data-game="fc">FC Mobile</button>
+      <button data-game="genshin">Genshin Impact</button>
+      <button data-game="valorant">Valorant</button>
+    </div>
+
+    <label style="display:block;margin-bottom:10px;font-weight:600;color:var(--primary);">Pilih Nominal</label>
+    <div class="topup-options" id="price-options">
+      <!-- Diisi otomatis -->
+    </div>
+
+    <div id="price-display"></div>
+
+    <label style="display:block;margin:20px 0 10px;font-weight:600;color:var(--primary);">Metode Pembayaran</label>
+    <div class="payment-methods">
+      <label><input type="radio" name="payment" value="DANA"> <span>DANA</span></label>
+      <label><input type="radio" name="payment" value="OVO"> <span>OVO</span></label>
+      <label><input type="radio" name="payment" value="QRIS"> <span>QRIS</span></label>
+    </div>
+
+    <button type="submit">Top Up Sekarang</button>
+  </div>
+
+  <footer>
+    <a href="EHANZZ.html">← Beranda</a>
+    <p>Hak Cipta &copy; 2025 | Ehanz Store</p>
+  </footer>
+
+  <script>
+    const gameList = document.querySelectorAll('#game-list button');
+    const priceOptions = document.getElementById('price-options');
+    const priceDisplay = document.getElementById('price-display');
+
+    const gamePrices = {
+      ml: [
+        { label: "5 Diamonds", price: 1500 },
+        { label: "12 Diamonds", price: 3000 },
+        { label: "28 Diamonds", price: 7000 },
+        { label: "59 Diamonds", price: 15000 },
+        { label: "85 Diamonds", price: 21000 },
+        { label: "170 Diamonds", price: 42000 },
+        { label: "240 Diamonds", price: 60000 },
+        { label: "275 Diamonds", price: 68000 },
+        { label: "366 Diamonds", price: 90000 },
+        { label: "568 Diamonds", price: 135000 },
+        { label: "Twilight Pass", price: 150000 },
+        { label: "Weekly Diamond Pass", price: 20000 },
+        { label: "Starlight Member", price: 150000 },
+        { label: "Starlight Plus", price: 300000 },
+        { label: "Collector Skin", price: 350000 }
+      ],
+      ff: [
+        { label: "5 Diamonds", price: 1000 },
+        { label: "12 Diamonds", price: 2500 },
+        { label: "50 Diamonds", price: 10000 },
+        { label: "70 Diamonds", price: 13000 },
+        { label: "140 Diamonds", price: 27000 },
+        { label: "355 Diamonds", price: 65000 },
+        { label: "720 Diamonds", price: 125000 },
+        { label: "1000 Diamonds", price: 175000 },
+        { label: "Membership Mingguan", price: 27000 },
+        { label: "Membership Bulanan", price: 110000 },
+        { label: "Elite Pass", price: 120000 },
+        { label: "Lucky Royale", price: 9000 },
+        { label: "Top Up Event", price: 35000 },
+        { label: "Bundle Skin", price: 40000 },
+        { label: "Gacha Diamond", price: 7000 }
+      ],
+      pubg: [
+        { label: "60 UC", price: 12000 },
+        { label: "325 UC", price: 65000 },
+        { label: "660 UC", price: 125000 },
+        { label: "1800 UC", price: 325000 },
+        { label: "3850 UC", price: 650000 },
+        { label: "8100 UC", price: 1250000 },
+        { label: "Elite Pass", price: 170000 },
+        { label: "Royale Pass", price: 250000 },
+        { label: "Supply Crate", price: 8000 },
+        { label: "Classic Crate", price: 8000 },
+        { label: "Premium Crate", price: 10000 },
+        { label: "Gacha UC", price: 10000 },
+        { label: "Weekly Membership", price: 27000 },
+        { label: "Monthly Membership", price: 110000 },
+        { label: "Treasure Event", price: 50000 }
+      ]
+    };
+
+    let selectedGame = null;
+
+    gameList.forEach(button => {
+      button.addEventListener('click', () => {
+        gameList.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        selectedGame = button.dataset.game;
+        showPrices(selectedGame);
+      });
+    });
+
+    function showPrices(gameKey) {
+      priceOptions.innerHTML = '';
+      priceDisplay.innerHTML = '';
+      const prices = gamePrices[gameKey] || [];
+
+      prices.forEach(p => {
+        const btn = document.createElement('button');
+        btn.textContent = p.label;
+        btn.onclick = () => {
+          document.querySelectorAll('#price-options button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          priceDisplay.textContent = `Harga: Rp ${p.price.toLocaleString('id-ID')}`;
+        };
+        priceOptions.appendChild(btn);
+      });
+    }
+  </script>
+
+</body>
+</html>

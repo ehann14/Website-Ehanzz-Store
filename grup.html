@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grup WhatsApp - Ehanz Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #0ea5e9;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --light-gray: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      color: var(--secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .groups-grid {
+      display: grid;
+      gap: 16px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .group-card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .group-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .group-card a {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: background 0.3s;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .group-card a:hover {
+      background: var(--primary);
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 16px;
+      display: block;
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding: 20px 0;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin: 8px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1><i class="fab fa-whatsapp"></i> Grup WhatsApp Jualan</h1>
+    <p>Pilih salah satu grup di bawah ini untuk bergabung:</p>
+  </div>
+
+  <div class="groups-grid">
+    <div class="group-card">
+      <a href="https://chat.whatsapp.com/your-link-1" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-users"></i> Grup JB 1
+      </a>
+    </div>
+    <div class="group-card">
+      <a href="https://chat.whatsapp.com/your-link-2" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-users"></i> Grup JB 2
+      </a>
+    </div>
+    <div class="group-card">
+      <a href="https://chat.whatsapp.com/your-link-3" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-users"></i> Grup JB 3
+      </a>
+    </div>
+  </div>
+
+  <a href="EHANZZ.html" class="back-link">← Kembali ke Beranda</a>
+
+  <footer>
+    <p>Hak Cipta &copy; 2025 | Ehanz Store</p>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akun ML Ready - Ehanz Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #0ea5e9;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --light-gray: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .header h1 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .stock-grid {
+      display: grid;
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+    }
+
+    .stock-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .stock-card h2 {
+      color: var(--secondary);
+      margin-bottom: 16px;
+      font-size: 1.3rem;
+    }
+
+    .specs ul {
+      list-style: none;
+      margin-left: 8px;
+    }
+
+    .specs li {
+      margin-bottom: 8px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .specs li:before {
+      content: "•";
+      color: var(--accent);
+      font-size: 1.4rem;
+      position: absolute;
+      left: 0;
+      top: -4px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding: 20px 0;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1><i class="fas fa-swords"></i> Akun ML Ready</h1>
+  </div>
+
+  <div class="stock-grid">
+    <!-- Stok 1 -->
+    <div class="stock-card">
+      <h2>Stok 1</h2>
+      <div class="specs">
+        <ul>
+          <li>Login: [Detail Login 1]</li>
+          <li>ID: [ID Akun 1]</li>
+          <li>Skin: [Detail Skin 1]</li>
+          <li>Hero: [Detail Hero 1]</li>
+          <li>Price: [Harga 1]</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS1" alt="Screenshot 1">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS2" alt="Screenshot 2">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS3" alt="Screenshot 3">
+      </div>
+    </div>
+
+    <!-- Stok 2 -->
+    <div class="stock-card">
+      <h2>Stok 2</h2>
+      <div class="specs">
+        <ul>
+          <li>Login: [Detail Login 2]</li>
+          <li>ID: [ID Akun 2]</li>
+          <li>Skin: [Detail Skin 2]</li>
+          <li>Hero: [Detail Hero 2]</li>
+          <li>Price: [Harga 2]</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS4" alt="Screenshot 4">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS5" alt="Screenshot 5">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS6" alt="Screenshot 6">
+      </div>
+    </div>
+
+    <!-- Stok 3 -->
+    <div class="stock-card">
+      <h2>Stok 3</h2>
+      <div class="specs">
+        <ul>
+          <li>Login: [Detail Login 3]</li>
+          <li>ID: [ID Akun 3]</li>
+          <li>Skin: [Detail Skin 3]</li>
+          <li>Hero: [Detail Hero 3]</li>
+          <li>Price: [Harga 3]</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS7" alt="Screenshot 7">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS8" alt="Screenshot 8">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS9" alt="Screenshot 9">
+      </div>
+    </div>
+
+    <!-- Stok 4 -->
+    <div class="stock-card">
+      <h2>Stok 4</h2>
+      <div class="specs">
+        <ul>
+          <li>Login: [Detail Login 4]</li>
+          <li>ID: [ID Akun 4]</li>
+          <li>Skin: [Detail Skin 4]</li>
+          <li>Hero: [Detail Hero 4]</li>
+          <li>Price: [Harga 4]</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS10" alt="Screenshot 10">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS11" alt="Screenshot 11">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS12" alt="Screenshot 12">
+      </div>
+    </div>
+
+    <!-- Stok 5 -->
+    <div class="stock-card">
+      <h2>Stok 5</h2>
+      <div class="specs">
+        <ul>
+          <li>Login: [Detail Login 5]</li>
+          <li>ID: [ID Akun 5]</li>
+          <li>Skin: [Detail Skin 5]</li>
+          <li>Hero: [Detail Hero 5]</li>
+          <li>Price: [Harga 5]</li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS13" alt="Screenshot 13">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS14" alt="Screenshot 14">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=SS15" alt="Screenshot 15">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="EHANZZ.html">← Beranda</a>
+    <p>Hak Cipta &copy; 2025 | Ehanz Store</p>
+  </footer>
+
+</body>
+</html>
+

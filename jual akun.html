@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jual Akun - Ehanz Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #0ea5e9;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --light-gray: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .note {
+      background: #f0f9ff;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 16px;
+      display: block;
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding: 20px 0;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    footer p {
+      margin: 8px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1><i class="fas fa-hand-holding-usd"></i> Jual Akun ML/FF</h1>
+  </div>
+
+  <div class="container">
+    <div class="note">
+      <strong>ℹ️ Catatan:</strong> Setelah mengklik tombol, Anda akan dialihkan ke WhatsApp. Silakan kirim detail akun <strong>dan screenshot</strong> secara manual di chat tersebut.
+    </div>
+
+    <form id="sellForm">
+      <div class="form-group">
+        <label for="name">Nama Anda</label>
+        <input type="text" id="name" placeholder="Masukkan nama Anda..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="game">Game (ML / FF)</label>
+        <input type="text" id="game" placeholder="Contoh: Mobile Legends atau Free Fire" required>
+      </div>
+
+      <div class="form-group">
+        <label for="details">Detail Akun</label>
+        <textarea id="details" placeholder="Level, Rank, Skin, Hero, Vault, dll..." required></textarea>
+      </div>
+
+      <button type="button" class="btn" onclick="sendToWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Kirim ke Admin via WhatsApp
+      </button>
+    </form>
+
+    <a href="EHANZZ.html" class="back-link">← Kembali ke Beranda</a>
+  </div>
+
+  <footer>
+    <p>Hak Cipta &copy; 2025 | Ehanz Store</p>
+  </footer>
+
+  <script>
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value;
+      const game = document.getElementById('game').value;
+      const details = document.getElementById('details').value;
+
+      if (!name || !game || !details) {
+        alert('Harap isi semua kolom!');
+        return;
+      }
+
+      const message = `Halo admin, saya ingin jual akun.\n\nNama: ${name}\nGame: ${game}\nDetail Akun:\n${details}`;
+      const url = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
+ 

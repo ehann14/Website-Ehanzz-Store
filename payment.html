@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metode Pembayaran - Ehanz Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #0ea5e9;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --light-gray: #e2e8f0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      color: var(--dark);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 32px auto;
+      background: white;
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--primary);
+      margin-bottom: 28px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .payment-method {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--light-gray);
+    }
+
+    .payment-method h2 {
+      color: var(--secondary);
+      margin-bottom: 16px;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .payment-details {
+      font-size: 1.1rem;
+      margin: 12px 0;
+    }
+
+    .payment-details strong {
+      color: var(--primary);
+    }
+
+    .payment-screenshot {
+      margin-top: 16px;
+    }
+
+    .payment-screenshot img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding: 20px 0;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 24px 16px; }
+      h1 { font-size: 1.5rem; }
+      .payment-screenshot img { width: 100px; height: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1><i class="fas fa-credit-card"></i> Metode Pembayaran</h1>
+
+    <div class="payment-method">
+      <h2><i class="fas fa-wallet"></i> Dana</h2>
+      <div class="payment-details">
+        <p><strong>A/N:</strong> [Nama Pemilik Dana]</p>
+        <p><strong>Nomor:</strong> [Nomor Dana]</p>
+      </div>
+      <div class="payment-screenshot">
+        <img src="https://placehold.co/150x150/e2e8f0/64748b?text=DANA" alt="DANA Screenshot">
+      </div>
+    </div>
+
+    <!-- Tambahkan metode lain jika perlu: OVO, ShopeePay, Bank, dll -->
+  </div>
+
+  <footer>
+    <a href="EHANZZ.html">← Beranda</a>
+    <p>Hak Cipta &copy; 2025 | Ehanz Store</p>
+  </footer>
+
+</body>
+</html>
